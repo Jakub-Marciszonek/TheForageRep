@@ -13,8 +13,9 @@ from zipfile import ZipFile
 def main():
     counter = 0
     print("[+] Beginning bruteforce ")
-    with ZipFile("Verizon_CloudPlatform\enc.zip") as zf:
-        with open("Verizon_CloudPlatform\rockyou.txt", "rb") as f:
+    with ZipFile("AIG_Cybersecurity\enc.zip") as zf:
+        with open("AIG_Cybersecurity\rockyou.txt", "rb") as f:
+        ### my code
             for i in f:
                 password = i.strip()
                 try:
@@ -28,6 +29,7 @@ Password: {password}")
                 except Exception as e:
                     print(f"Error: {e}")
         print("Password not found in the list")
+        ### end of my code
             # Write your logic here...
             # Iterate through password entries in rockyou.txt
 
